@@ -12,8 +12,10 @@ namespace UrlShortener.Web
 
             builder.Services.AddControllersWithViews();
 
-            builder.Services.AddApplication(builder.Configuration);
-            builder.Services.AddInfrastructure(builder.Configuration);
+            builder.Services
+                .AddApplication(builder.Configuration)
+                .AddInfrastructure(builder.Configuration);
+
             builder.Services.AddJwtAuthentication(builder.Configuration);
 
             var app = builder.Build();

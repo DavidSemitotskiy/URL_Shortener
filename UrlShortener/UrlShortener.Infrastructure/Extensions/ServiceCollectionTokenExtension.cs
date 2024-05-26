@@ -11,7 +11,7 @@ namespace UrlShortener.Infrastructure.Extensions
     {
         public static void AddTokenGeneration(this IServiceCollection services, IConfiguration configuration)
         {
-            ArgumentNullException.ThrowIfNull(configuration);
+            ArgumentNullException.ThrowIfNull(configuration, nameof(configuration));
 
             var tokenSettingsSection = configuration.GetSection(ConfigurationSectionNames.TokenSettings);
 

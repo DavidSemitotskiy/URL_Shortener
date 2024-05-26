@@ -5,11 +5,14 @@ namespace UrlShortener.Infrastructure.Extensions
 {
     public static class ServiceCollectionDIExtensions
     {
-        public static void AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
         {
-            ArgumentNullException.ThrowIfNull(configuration);
+            ArgumentNullException.ThrowIfNull(configuration, nameof(configuration));
 
             services.AddTokenGeneration(configuration);
+            services.AddDatabase(configuration);
+
+            return services;
         }
     }
 }

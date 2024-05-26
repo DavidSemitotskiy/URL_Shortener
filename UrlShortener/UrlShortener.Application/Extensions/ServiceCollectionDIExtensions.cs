@@ -7,11 +7,13 @@ namespace UrlShortener.Application.Extensions
 {
     public static class ServiceCollectionDIExtensions
     {
-        public static void AddApplication(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddApplication(this IServiceCollection services, IConfiguration configuration)
         {
-            ArgumentNullException.ThrowIfNull(configuration);
+            ArgumentNullException.ThrowIfNull(configuration, nameof(configuration));
 
             services.AddScoped<IShortUrlGenerator, ShortUrlGenerator>();
+
+            return services;
         }
     }
 }
