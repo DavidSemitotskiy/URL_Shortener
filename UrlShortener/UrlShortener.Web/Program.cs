@@ -1,4 +1,5 @@
-﻿using UrlShortener.Infrastructure.Extensions;
+﻿using UrlShortener.Application.Extensions;
+using UrlShortener.Infrastructure.Extensions;
 using UrlShortener.Web.Extensions;
 
 namespace UrlShortener.Web
@@ -10,6 +11,8 @@ namespace UrlShortener.Web
             var builder = WebApplication.CreateBuilder(args);
 
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddApplication(builder.Configuration);
             builder.Services.AddInfrastructure(builder.Configuration);
             builder.Services.AddJwtAuthentication(builder.Configuration);
 
