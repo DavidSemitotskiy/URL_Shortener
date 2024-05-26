@@ -1,4 +1,7 @@
-﻿namespace UrlShortener.Web
+﻿using UrlShortener.Infrastructure.Extensions;
+using UrlShortener.Web.Extensions;
+
+namespace UrlShortener.Web
 {
     public class Program
     {
@@ -7,6 +10,8 @@
             var builder = WebApplication.CreateBuilder(args);
 
             builder.Services.AddControllersWithViews();
+            builder.Services.AddInfrastructure(builder.Configuration);
+            builder.Services.AddJwtAuthentication(builder.Configuration);
 
             var app = builder.Build();
 
@@ -19,6 +24,7 @@
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllerRoute(
