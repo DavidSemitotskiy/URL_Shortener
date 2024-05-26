@@ -6,9 +6,9 @@ namespace UrlShortener.Domain.Models
     {
         public Role Role { get; set; }
 
-        public string Login { get; set; }
+        public string Login { get; set; } = default!;
 
-        public string Password { get; set; }
+        public string Password { get; set; } = default!;
 
         public ICollection<ShortUrl>? ShortUrls { get; set; }
     }
