@@ -11,7 +11,7 @@ namespace UrlShortener.Web.Extensions
     {
         public static void AddJwtAuthentication(this IServiceCollection services, IConfiguration configuration)
         {
-            ArgumentNullException.ThrowIfNull(configuration);
+            ArgumentNullException.ThrowIfNull(configuration, nameof(configuration));
 
             var tokenSettings = configuration.GetSection(ConfigurationSectionNames.TokenSettings).Get<TokenSettings>()
                 ?? throw new NoNullAllowedException(nameof(ConfigurationSectionNames.TokenSettings));
