@@ -9,21 +9,18 @@ namespace UrlShortener.Web.Extensions
 {
     public static class ServiceCollectionAuthenticationExtension
     {
-        public static void AddJwtAuthentication(
-            this IServiceCollection services,
-            IConfiguration configuration)
+        public static void AddJwtAuthentication(this IServiceCollection services, IConfiguration configuration)
         {
             ArgumentNullException.ThrowIfNull(configuration);
 
-            var tokenSettings = configuration
-                .GetSection(ConfigurationSectionNames.TokenSettings)
-                .Get<TokenSettings>()
-                    ?? throw new NoNullAllowedException(nameof(ConfigurationSectionNames.TokenSettings));
+            var tokenSettings = configuration.GetSection(ConfigurationSectionNames.TokenSettings).Get<TokenSettings>()
+                ?? throw new NoNullAllowedException(nameof(ConfigurationSectionNames.TokenSettings));
 
             services
                 .AddAuthentication(options =>
                 {
                     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
                 })
                 .AddJwtBearer(options =>
                 {
@@ -35,8 +32,7 @@ namespace UrlShortener.Web.Extensions
                         ValidateIssuerSigningKey = true,
                         ValidIssuer = tokenSettings.Issuer,
                         ValidAudience = tokenSettings.Audience,
-                        IssuerSigningKey = new SymmetricSecurityKey(
-                            Encoding.UTF8.GetBytes(tokenSettings.Key))
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(tokenSettings.Key))
                     };
                 });
         }
