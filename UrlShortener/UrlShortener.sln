@@ -3,23 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34316.72
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.Domain", "UrlShortener.Domain\UrlShortener.Domain.csproj", "{40499F98-6EFC-4E4D-8DF6-E4E2C52EE427}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UrlShortener.Domain", "UrlShortener.Domain\UrlShortener.Domain.csproj", "{40499F98-6EFC-4E4D-8DF6-E4E2C52EE427}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.Application", "UrlShortener.Application\UrlShortener.Application.csproj", "{B92C9DEA-DAC6-4B04-91D3-9DEEC7A528C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UrlShortener.Application", "UrlShortener.Application\UrlShortener.Application.csproj", "{B92C9DEA-DAC6-4B04-91D3-9DEEC7A528C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.Infrastructure", "UrlShortener.Infrastructure\UrlShortener.Infrastructure.csproj", "{28565CFE-196C-44B9-9A90-BD0C7C50D330}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UrlShortener.Infrastructure", "UrlShortener.Infrastructure\UrlShortener.Infrastructure.csproj", "{28565CFE-196C-44B9-9A90-BD0C7C50D330}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.Web", "UrlShortener.Web\UrlShortener.Web.csproj", "{73B26B89-3DE6-43CD-ADB3-E9BBDB11EFE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UrlShortener.Web", "UrlShortener.Web\UrlShortener.Web.csproj", "{73B26B89-3DE6-43CD-ADB3-E9BBDB11EFE0}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{92EF5872-9503-4A12-8FDD-C0C3749601EF}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{6D2C605A-F77C-42FC-A252-6743461189B7}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{FD7F230A-C71A-4DCF-B115-65149CC16BE6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{2468D62C-20D9-473F-8DB3-D6D645993BDE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.Application.UnitTests", "UrlShortener.Application.UnitTests\UrlShortener.Application.UnitTests.csproj", "{E1B54A57-6D6E-4C2E-84E6-D4A865333D4F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.Infrastructure.UnitTests", "Tests\UnitTests\UrlShortener.Infrastructure.UnitTests\UrlShortener.Infrastructure.UnitTests.csproj", "{D4B49AAE-D800-4218-AFD2-6C31A5642B5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.Infrastructure.UnitTests", "UrlShortener.Infrastructure.UnitTests\UrlShortener.Infrastructure.UnitTests.csproj", "{F6813747-8919-485B-940B-70DF4888A216}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.Application.UnitTests", "Tests\UnitTests\UrlShortener.Application.UnitTests\UrlShortener.Application.UnitTests.csproj", "{EF5DCB45-42A9-4A79-B914-249B7B7EE0C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.Web.UnitTests", "UrlShortener.Web.UnitTests\UrlShortener.Web.UnitTests.csproj", "{0CC65236-0A16-4A77-A7A5-BCFC844D6197}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.Web.UnitTests", "Tests\UnitTests\UrlShortener.Web.UnitTests\UrlShortener.Web.UnitTests.csproj", "{3BA13286-9F6C-4320-8FC6-3A570E0F5FE3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,27 +43,27 @@ Global
 		{73B26B89-3DE6-43CD-ADB3-E9BBDB11EFE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73B26B89-3DE6-43CD-ADB3-E9BBDB11EFE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73B26B89-3DE6-43CD-ADB3-E9BBDB11EFE0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E1B54A57-6D6E-4C2E-84E6-D4A865333D4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E1B54A57-6D6E-4C2E-84E6-D4A865333D4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E1B54A57-6D6E-4C2E-84E6-D4A865333D4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E1B54A57-6D6E-4C2E-84E6-D4A865333D4F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F6813747-8919-485B-940B-70DF4888A216}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F6813747-8919-485B-940B-70DF4888A216}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F6813747-8919-485B-940B-70DF4888A216}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F6813747-8919-485B-940B-70DF4888A216}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0CC65236-0A16-4A77-A7A5-BCFC844D6197}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0CC65236-0A16-4A77-A7A5-BCFC844D6197}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0CC65236-0A16-4A77-A7A5-BCFC844D6197}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0CC65236-0A16-4A77-A7A5-BCFC844D6197}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4B49AAE-D800-4218-AFD2-6C31A5642B5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4B49AAE-D800-4218-AFD2-6C31A5642B5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4B49AAE-D800-4218-AFD2-6C31A5642B5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4B49AAE-D800-4218-AFD2-6C31A5642B5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF5DCB45-42A9-4A79-B914-249B7B7EE0C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF5DCB45-42A9-4A79-B914-249B7B7EE0C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF5DCB45-42A9-4A79-B914-249B7B7EE0C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF5DCB45-42A9-4A79-B914-249B7B7EE0C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BA13286-9F6C-4320-8FC6-3A570E0F5FE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BA13286-9F6C-4320-8FC6-3A570E0F5FE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BA13286-9F6C-4320-8FC6-3A570E0F5FE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BA13286-9F6C-4320-8FC6-3A570E0F5FE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{FD7F230A-C71A-4DCF-B115-65149CC16BE6} = {92EF5872-9503-4A12-8FDD-C0C3749601EF}
-		{E1B54A57-6D6E-4C2E-84E6-D4A865333D4F} = {FD7F230A-C71A-4DCF-B115-65149CC16BE6}
-		{F6813747-8919-485B-940B-70DF4888A216} = {FD7F230A-C71A-4DCF-B115-65149CC16BE6}
-		{0CC65236-0A16-4A77-A7A5-BCFC844D6197} = {FD7F230A-C71A-4DCF-B115-65149CC16BE6}
+		{2468D62C-20D9-473F-8DB3-D6D645993BDE} = {6D2C605A-F77C-42FC-A252-6743461189B7}
+		{D4B49AAE-D800-4218-AFD2-6C31A5642B5C} = {2468D62C-20D9-473F-8DB3-D6D645993BDE}
+		{EF5DCB45-42A9-4A79-B914-249B7B7EE0C9} = {2468D62C-20D9-473F-8DB3-D6D645993BDE}
+		{3BA13286-9F6C-4320-8FC6-3A570E0F5FE3} = {2468D62C-20D9-473F-8DB3-D6D645993BDE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {82909824-F494-4716-8773-309168C8D4E3}
