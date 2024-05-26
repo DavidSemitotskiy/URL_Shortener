@@ -26,9 +26,11 @@ namespace UrlShortener.Web.Extensions
                 {
                     options.TokenValidationParameters = new TokenValidationParameters
                     {
+                        ClockSkew = TimeSpan.Zero,
                         ValidateIssuer = true,
                         ValidateAudience = true,
                         ValidateLifetime = true,
+                        RequireExpirationTime = true,
                         ValidateIssuerSigningKey = true,
                         ValidIssuer = tokenSettings.Issuer,
                         ValidAudience = tokenSettings.Audience,
