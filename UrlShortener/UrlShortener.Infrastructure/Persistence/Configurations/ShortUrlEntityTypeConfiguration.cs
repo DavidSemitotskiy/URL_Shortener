@@ -10,6 +10,12 @@ namespace UrlShortener.Infrastructure.Persistence.Configurations
         {
             ArgumentNullException.ThrowIfNull(builder, nameof(builder));
 
+            builder.HasKey(shortUrl => shortUrl.Id);
+
+            builder
+              .Property(shortUrl => shortUrl.Id)
+              .HasDefaultValueSql("NEWID()");
+
             builder
                 .HasOne(shortUrl => shortUrl.User)
                 .WithMany(user => user.ShortUrls)

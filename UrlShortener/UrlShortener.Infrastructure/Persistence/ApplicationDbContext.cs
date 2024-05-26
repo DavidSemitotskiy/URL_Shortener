@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using UrlShortener.Domain.Models;
+using UrlShortener.Infrastructure.Persistence.Configurations;
 
 namespace UrlShortener.Infrastructure.Persistence
 {
@@ -15,7 +16,8 @@ namespace UrlShortener.Infrastructure.Persistence
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
+            modelBuilder.ApplyConfigurationsFromAssembly(
+                typeof(ShortUrlEntityTypeConfiguration).Assembly);
         }
     }
 }
