@@ -4,5 +4,6 @@ namespace UrlShortener.Domain.Interfaces
 {
     public interface IShortUrlRepository : IBaseRepository<ShortUrl, Guid>
     {
+        Task RemoveAsync(ShortUrl shortUrl);
     }
 }
