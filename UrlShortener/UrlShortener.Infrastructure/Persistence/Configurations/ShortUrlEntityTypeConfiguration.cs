@@ -13,8 +13,8 @@ namespace UrlShortener.Infrastructure.Persistence.Configurations
             builder.HasKey(shortUrl => shortUrl.Id);
 
             builder
-              .Property(shortUrl => shortUrl.Id)
-              .HasDefaultValueSql("NEWID()");
+                .Property(shortUrl => shortUrl.Id)
+                .HasDefaultValueSql("NEWID()");
 
             builder
                 .HasOne(shortUrl => shortUrl.User)
